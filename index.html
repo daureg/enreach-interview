@@ -20,17 +20,38 @@
     <style>
 	#title h1 {margin: 0.5em auto;}
 	#title h1, h3 {text-transform: uppercase;}
+	#student h2 {margin-bottom: 0.8em}
 	figcaption {font-size: 14pt !important; text-align: right;}
-	#paper p {font-size: 22pt !important;}
-	#nn, #customers img {border: none;}
-	img {max-width: 80% !important; max-height: 80% !important;}
+	#paper h2 {word-spacing:nowrap !important;}
+	#paper p {font-size: 20pt !important;}
+	img.clean {border: none !important;}
+	#chrono img {vertical-align: middle !important; margin-right: .4em;
+		box-shadow: none;}
+	#chrono table {width: 50%; margin: 3.8em auto;}
+	#chrono table, #chrono h2 {color: #eee8d5 !important;}
+	#ferrari {max-height: 75% !important;}
 	audio {display: none;}
-	#board h2 {color: white;}
-	#clone {color: white !important;}
-	#clone h1 {margin-bottom: 1.4em; color: #222;}
-	#adam h1 {text-align: left; margin-bottom: 1.4em; color: #222;}
+	table.secret {width: 100%;}
+	.secret td , .secret th {text-align:center !important; vertical-align:middle;}
+	#board h2 {color: #eee8d5; margin-bottom: 2em;}
+	#board span {color: #268bd2; cursor: pointer;}
+	#clone {color: #eee8d5 !important;}
+	#clone h1 {margin-top: -0.5em; margin-bottom: 1em; color: #073642;}
+	#adam h1 {font-size: 3em; text-align: left; margin-left: -20%; width:
+		80%; margin-bottom: 2.4em; color: #073642;}
+	#adam {top: -60% !important;}
+	.blue {color: #268bd2;}
+	.dark {color: #073642;} 
+	.strike {text-decoration: line-through;}
+	h1, h2, h3 {-webkit-hyphens: none !important;
+		-moz-hyphens: none !important; -ms-hyphens: none !important;
+		hyphens: none !important;}
+	blockquote { quotes: '“' '”' !important; padding-left: .5em !important;
+		border-left: .2em solid #93a1a1 !important; box-shadow: none !important;
+		margin: 1em auto !important;}
+	blockquote:before { content: open-quote }
+	blockquote:after  { content: close-quote }
     </style>
-
 
     <!-- If the query includes 'print-pdf', use the PDF print sheet -->
     <script>
@@ -45,21 +66,20 @@
 
       <!-- Any section element inside of this container is displayed as a slide -->
       <div class="slides">
-		  <!--
 		  <section id="title">
 			  <h3>Igor &amp; Géraud</h3>
 			  <p>tell you</p>
 			  <h1>A few things about investors</h1>
 			  <h3>based on the true story of <strong>Kimmo Kiviluoto</strong></h3>
 		  </section>
-		  <section>
+		  <section id="student">
 			  <h2>Say you are a sexy Aalto PhD student</h2>
-<iframe class="stretch" src="http://cis.legacy.ics.tkk.fi/kkluoto/" seamless></iframe>
+			  <iframe class="stretch" src="http://cis.legacy.ics.tkk.fi/kkluoto/" seamless></iframe>
 		  </section>
 		  <section>
 			  <h2>Working in a sexy field</h2>
 			  <figure>
-				  <img id="nn" src="assets/Two_layer_ann.svg"
+				  <img class="clean" src="assets/Two_layer_ann.svg"
 				  alt="a two-layer artificial neural network with weight and bias terms labeled." />
 				  <figcaption>
 				  Two-layer neural network
@@ -68,156 +88,150 @@
 			  </figure>
 			  <p>Well, maybe we are not totally objective…</p>
 			  <p class="fragment">
-			  But so are <a href="http://www.wired.com/wiredenterprise/2013/12/facebook-yann-lecun-qa/">Facebook</a>,
+			  But then so are <a href="http://www.wired.com/wiredenterprise/2013/12/facebook-yann-lecun-qa/">Facebook</a>,
 			  <a href="http://www.amazon.com/gp/jobs/205395">Amazon</a> and
-			  <a href="http://techblog.netflix.com/2014/02/distributed-neural-networks-with-gpus.html">Netflix</a></p>
+			  <a href="http://techblog.netflix.com/2014/02/distributed-neural-networks-with-gpus.html">Netflix</a>
+			  .</p>
 		  </section>
 		  <section id="paper">
-			  <h2>But friends and family disregard your professional achievements</h2>
+			  <h2>Yet friends and family disregard your professional achievements</h2>
 			  <iframe class="stretch" src="assets/nips_page3.pdf" seamless></iframe>
-			  <p>Published in <a
-				  href="http://papers.nips.cc/paper/1417-s-map-a-network-with-a-simple-self-organization-algorithm-for-generative-topographic-mappings">Neural Information Processing Systems (1997)</a></p>
+			  <p>Published in the prestigious
+			  <a href="http://papers.nips.cc/paper/1417-s-map-a-network-with-a-simple-self-organization-algorithm-for-generative-topographic-mappings">
+				  Neural Information Processing Systems Conference in 1997</a></p>
 		  </section>
 		  <section>
-			  <h2>What about starting your business to have new arguments?</h2>
+			  <h2>What about starting your own business to have new arguments?</h2>
 			  <figure>
-				  <img id="car" src="assets/scar.jpg" alt="Ferrari F430 Scuderia" />
+				  <img id="ferrari" class="clean" src="assets/scar.jpg" alt="Ferrari F430 Scuderia" />
 				  <figcaption>
 				  (by <a href="http://www.flickr.com/photos/22526198@N07/6697282413/in/photolist-bcPjJr-bnoRAc-7Sg3Z9-7ScMng-7ScMmc-bcPhUD-adk3ce-7LCH2N">Axion23</a>)
 				  </figcaption>
 			  </figure>
 		  </section>
-		  <section>
-			  <h2>Clustering in 2 dimensions</h2>
-			  <iframe class="stretch" src="http://mlehman.github.io/kmeans-javascript/" seamless></iframe>
-		  </section>
 
-		  <section id="customers">
-			  <h2>Enreach customers</h2>
-
-		  </section>
-		  <section>
+		  <section id="chrono" data-background="assets/adventure.jpg">
 		  <h2>Kimmo's adventures</h2>
-		  <ul>
-			  <li>NNets: 1998 – 2000</li>
-			  <li><img src="assets/xtract_logo.png">2001 – 2009</li>
-			  <li><img src="assets/enreach-logo.png">2010 – </li>
-		  </ul>
+		  <table>
+			  <tr><td>NNets</td><td>1998 – 2000</td></tr>
+			  <tr><td><img class="clean" src="assets/xtract_white.png"></td><td>2001 – 2009</td></tr>
+			  <tr><td><img class="clean" src="assets/enreach_white.png"></td><td>2010 – </td></tr>
+		  </table>
 		  </section>
 		  <section>
-		  <h2>Xtract</h2>
-		  <ul>
-			  <li>Software for bank data analysis</li>
-			  <li>Mobile social network analysis</li>
-		  </ul>
-		  <p>But all the good things have an end</p>
-		  <img src="assets/graph2.png" class="stretch">
+			  <h2>Xtract</h2>
+			  <p>Software for bank data analysis</p>
+			  <p>Mobile social network analysis</p>
+			  <img src="assets/graph_cut.png" class="stretch clean">
+			  <p>But all the good things must come to an end</p>
 		  </section>
 		  <section>
 		  <h2>Enreach</h2>
-		  <ul>
-			  <li>Content and advertising customization for premium publishers</li>
-			  <li>Core clients in the Nordics but internationalization is on its way</li>
-		  </ul>
+			  <p>Content and advertising customization for premium publishers</p>
+			  <p>Core clients in the Nordics and internationalization is on its way</p>
 <p>
 <a  title="Svenska Dagbladet" href="http://www.svd.se/" target="_blank">
-<img class="thumbnail size-full wp-image-120" alt="svd logo" src="assets/enreach-me-customers_13.png" height="35" width="107">
+<img class="clean size-full wp-image-120" alt="svd logo" src="assets/enreach-me-customers_13.png" height="35" width="107">
 </a>
  <a  title="Sanoma" href="http://www.sanoma.com/" target="_blank">
-<img class="thumbnail size-full wp-image-121" alt="sanoma logo" src="assets/enreach-me-customers_14.png" height="35" width="209">
+<img class="clean size-full wp-image-121" alt="sanoma logo" src="assets/enreach-me-customers_14.png" height="35" width="209">
 </a>
  <a title="MTV3" href="http://www.mtv3.fi/"  target="_blank">
-<img class="thumbnail size-full wp-image-122" alt="mtv3 logo" src="assets/enreach-me-customers_15.png" height="35" width="142">
+<img class="clean size-full wp-image-122" alt="mtv3 logo" src="assets/enreach-me-customers_15.png" height="35" width="142">
 </a>
  <a title="Kauppalehti" href="http://www.kauppalehti.fi"  target="_blank">
-<img class="thumbnail size-full wp-image-123" alt="kauppalehti logo"
+<img class="clean size-full wp-image-123" alt="kauppalehti logo"
 src="assets/enreach-me-customers_16.png" height="35" width="173">
 </a>
  <a title="Kaleva" href="http://www.kaleva.fi/"  target="_blank">
-<img class="thumbnail size-full wp-image-124" alt="kaleva logo" src="assets/enreach-me-customers_17.png" height="35" width="166">
+<img class="clean size-full wp-image-124" alt="kaleva logo" src="assets/enreach-me-customers_17.png" height="35" width="166">
 </a>
 </p>
 
 <p>
 <a  title="Iltalehti" href="http://www.iltalehti.fi/" target="_blank">
-<img class="thumbnail size-full wp-image-125" alt="iltalehti logo" src="assets/enreach-me-customers_21.png" height="29" width="159">
+<img class="clean size-full wp-image-125" alt="iltalehti logo" src="assets/enreach-me-customers_21.png" height="29" width="159">
 </a>
  <a  title="Helsingin Sanomat" href="http://www.hs.fi/" target="_blank">
-<img class="thumbnail size-full wp-image-126" alt="HS logo" src="assets/enreach-me-customers_22.png" height="29" width="281">
+<img class="clean size-full wp-image-126" alt="HS logo" src="assets/enreach-me-customers_22.png" height="29" width="281">
 </a>
  <a title="Eniro" href="http://www.enirogroup.com/"  target="_blank">
-<img class="thumbnail size-full wp-image-127" alt="eniro logo" src="assets/enreach-me-customers_23.png" height="29" width="164">
+<img class="clean size-full wp-image-127" alt="eniro logo" src="assets/enreach-me-customers_23.png" height="29" width="164">
 </a>
  <a title="Aftonbladet" href="http://www.aftonbladet.se/"  target="_blank">
-<img class="thumbnail size-full wp-image-128" alt="aftonbladet logo"
+<img class="clean size-full wp-image-128" alt="aftonbladet logo"
 src="assets/enreach-me-customers_24.png" height="29" width="199">
 </a>
 </p>
 
 <p>
  <a title="Bonnier" href="http://www.bonnier.com/"  target="_blank">
-<img class="thumbnail size-full wp-image-129" alt="bonnier logo" src="assets/enreach-me-customers_25.png" height="29" width="207">
+<img class="clean size-full wp-image-129" alt="bonnier logo" src="assets/enreach-me-customers_25.png" height="29" width="207">
 </a>
 <a title="Egmont" href="http://www.egmontkustannus.fi/"  target="_blank">
-<img class="thumbnail size-full wp-image-130" alt="egmont logo" src="assets/enreach-me-customers_29.png" height="49" width="166">
+<img class="clean size-full wp-image-130" alt="egmont logo" src="assets/enreach-me-customers_29.png" height="49" width="166">
 </a>
  <a title="Alma media" href="http://www.almamedia.fi/"  target="_blank">
-<img class="thumbnail size-full wp-image-131" alt="alma logo" src="assets/enreach-me-customers_30.png" height="49" width="111">
+<img class="clean size-full wp-image-131" alt="alma logo" src="assets/enreach-me-customers_30.png" height="49" width="111">
 </a>
  <a title="Dagensindustri" href="http://dagensindustri.se/"  target="_blank">
-<img class="thumbnail size-full wp-image-132" alt="dagens industri logo"
+<img class="clean size-full wp-image-132" alt="dagens industri logo"
 src="assets/enreach-me-customers_31.png" height="49" width="127">
 </a>
  <a title="Aller" href="http://www.aller.fi/"  target="_blank">
-<img class="thumbnail size-full wp-image-133" alt="aller logo" src="assets/enreach-me-customers_32.png" height="49" width="141">
+<img class="clean size-full wp-image-133" alt="aller logo" src="assets/enreach-me-customers_32.png" height="49" width="141">
 </a>
 </p>
-      </div>
+		  </section>
 		  <section>
-		  <h1>Kimmo's secret 1: Know your investors like your spouse (or better)</h1>
-		  <table>
+		  <h1>Secret 1: Know your investors like your spouse (or better)</h1>
+		  <blockquote>
+		  When you're bringing new investors, they'll be the people you are
+		  married with.
+		  </blockquote>
+		  <table class="secret">
 			  <tr>
 				  <th>Xtract</th>
 				  <th>Enreach</th>
 			  </tr>
 			  <tr>
 				  <td>Taking money without question</td>
-				  <td>Careful diligence: terms &amp; motivation</td>
+				  <td>Careful due diligence: terms &amp; motivation</td>
 			  </tr>
 		  </table>
 		  </section>
 		  <section id="board" data-background="assets/board.jpg">
 		  <h2>Let us hear a
-			  <a href="/#" onclick="document.getElementById('story').play();">story</a>
+			  <span onclick="document.getElementById('story').play();">story</span>
 			  from the trenches</h2>
 		  <audio id="story" controls="controls">
-		  Your browser does not support the <code>audio</code> element.
 		  <source src="assets/story.ogg" type="audio/ogg">
 		  </audio>
 		  </section>
 		  <section id="clone" data-background="assets/board_of_clone.jpg">
 		  <h1>Secret 2: Beware of the clones in your board</h1>
-		  <table>
+		  <table class="secret">
 			  <tr>
 				  <th>Xtract</th>
 				  <th>Enreach</th>
 			  </tr>
 			  <tr>
 				  <td>Old mobile glory</td>
-				  <td>Advertising expert, ? and Money bag</td>
+				  <td>Advertising expert, Science doctor and Money bag</td>
 			  </tr>
 		  </table>
 		  </section>
-		  <section id="adam" data-background="assets/adam.jpg">
-		  <h1>Secret 3: Keep in touch with the market</h1>
-		  <table>
+		  <section id="adam" data-background="assets/adam_center.jpg">
+			  <h1>Secret 3: Keep in touch with your <span
+					  class="strike">maker</span> market</h1>
+		  <table class="secret">
 			  <tr>
-				  <th>Xtract</th>
-				  <th>Enreach</th>
+				  <th class="dark">Xtract</th>
+				  <th class="blue">Enreach</th>
 			  </tr>
 			  <tr>
-				  <td>Technological shift</td>
-				  <td>Exit strategy</td>
+				  <td class="dark">Technological shift</td>
+				  <td class="blue">Consolidation &amp; exit strategy</td>
 			  </tr>
 		  </table>
 		  </section>
@@ -225,8 +239,6 @@ src="assets/enreach-me-customers_31.png" height="49" width="127">
 		  <h1>Thank you for your attention</h1>
 		  <h2>Any question?</h2>
 		  </section>
-		  -->
-
     </div>
 
 
